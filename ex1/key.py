@@ -70,7 +70,12 @@ def main(args=None):
                 speed=360
             else:
                 speed=speed-10
-            print(speed)
+            print(speed)    
+            
+            if time ==4:
+                time.sleep(4)
+                speed=10
+                print(speed)
 
         if key=="a":
             print(key)
