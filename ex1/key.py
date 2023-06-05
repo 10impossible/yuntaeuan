@@ -43,7 +43,7 @@ def main(args=None):
             time.sleep(5)
 
             # 90도 오른쪽으로 회전하는 동작 추가
-            angle += 90
+            angle += 5
             twist = Twist()
             angle = float(angle)
             twist.angular.z = angle
