@@ -43,18 +43,22 @@ def main(args=None):
             time.sleep(5)
 
             # 90도 오른쪽으로 회전하는 동작 추가
-            angle += 50  # 회전 각도 설정
+            twist = Twist()
             angle = float(angle)
-            twist.angular.z = angle
+            twist.angular.z = 90
             pub.publish(twist)
-            time.sleep(4)  # 회전 시간 설정
-
+            
             # 다시 속도가 10인 상태로 전진
-            speed += 50
+            speed += 150
             speed = float(speed)
             twist.linear.x = speed
             pub.publish(twist)
-            time.sleep(10)
+            time.sleep(3)
+            
+            twist = Twist()
+            twist.linear.x = 0
+            twist.angular.z = 0
+            pub.publish(twist)
 
             
           
