@@ -28,7 +28,6 @@ def main(args=None):
     angle=0
 
     
-    while(1):
     while True:
         key = getKey()
         if key == "w":
