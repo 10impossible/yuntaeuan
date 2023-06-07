@@ -196,7 +196,7 @@ def main(args=None):
             twist.angular.z = 0.0
             pub.publish(twist)  
             
-         if key =="3":
+        if key =="3":
             print(key)
             speed += 100  # 속도를 10 증가시킴
             print(speed)
