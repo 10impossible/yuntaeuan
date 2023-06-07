@@ -30,7 +30,7 @@ def main(args=None):
     
     while True:
         key = getKey()
-        if key == "w":
+        if key == "1":
             print(key)
             speed += 60  # 속도를 10 증가시킴
             print(speed)
@@ -40,7 +40,7 @@ def main(args=None):
             speed = float(speed)
             twist.linear.x = speed
             pub.publish(twist)
-            time.sleep(5)
+            time.sleep(10)
 
             # 90도 오른쪽으로 회전하는 동작 추가
             angle = 45
@@ -50,8 +50,26 @@ def main(args=None):
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
+            time.sleep(14)
+            
+            angle = 0.0
+            speed = 60
+            speed = float(speed)
+            twist = Twist()
+            twist.linear.x = speed
+            twist.angular.z = angle
+            pub.publish(twist)
+            time.sleep(5)
+            
+            angle = -45
+            speed = 0.0
+            speed = float(speed)
+            twist = Twist()
+            twist.linear.x = speed
+            twist.angular.z = angle
+            pub.publish(twist)
             time.sleep(7)
-
+            
             # 다시 속도가 50인 상태로 전진
             angle = 0.0
             speed = 60
@@ -60,7 +78,26 @@ def main(args=None):
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
-            time.sleep(3)
+            time.sleep(10)
+            
+            angle = 45
+            speed = 0.0
+            speed = float(speed)
+            twist = Twist()
+            twist.linear.x = speed
+            twist.angular.z = angle
+            pub.publish(twist)
+            time.sleep(7)
+            
+            angle = 0.0
+            speed = 60
+            speed = float(speed)
+            twist = Twist()
+            twist.linear.x = speed
+            twist.angular.z = angle
+            pub.publish(twist)
+            time.sleep(5)
+            
 
             twist = Twist()
             twist.linear.x = 0.0
