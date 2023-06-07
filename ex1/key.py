@@ -52,6 +52,7 @@ def main(args=None):
 
             # 다시 속도가 50인 상태로 전진
             speed = 50
+            speed = float(speed)
             twist = Twist()
             twist.linear.x = speed
             pub.publish(twist)
