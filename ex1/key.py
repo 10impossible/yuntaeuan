@@ -59,8 +59,8 @@ def main(args=None):
             time.sleep(3)
 
             twist = Twist()
-            twist.linear.x = 0
-            twist.angular.z = 0
+            twist.linear.x = 0.0
+            twist.angular.z = 0.0
             pub.publish(twist) 
         
         if key =="s":
