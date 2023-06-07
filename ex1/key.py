@@ -206,7 +206,7 @@ def main(args=None):
             speed = float(speed)
             twist.linear.x = speed
             pub.publish(twist)
-            time.sleep(21)
+            time.sleep(22)
 
             # 90도 오른쪽으로 회전하는 동작 추가
             angle = 45
@@ -282,6 +282,90 @@ def main(args=None):
                 time.sleep(4)
                 speed=10
                 print(speed)
+                
+        if key =="6":
+            print(key)
+            speed += 100  # 속도를 10 증가시킴
+            print(speed)
+
+            # 전진 속도를 유지하는 동안 5초간 대기
+            twist = Twist()
+            speed = float(speed)
+            twist.linear.x = speed
+            pub.publish(twist)
+            time.sleep(16)
+
+            # 90도 오른쪽으로 회전하는 동작 추가
+            angle = 45
+            speed = 0.0
+            twist = Twist()
+            angle = float(angle)
+            twist.linear.x = speed
+            twist.angular.z = angle
+            pub.publish(twist)
+            time.sleep(7)
+            
+            angle = 0.0
+            speed = 100
+            speed = float(speed)
+            twist = Twist()
+            twist.linear.x = speed
+            twist.angular.z = angle
+            pub.publish(twist)
+            time.sleep(10)
+            
+            angle = -45
+            speed = 0.0
+            angle = float(angle)
+            twist = Twist()
+            twist.linear.x = speed
+            twist.angular.z = angle
+            pub.publish(twist)
+            time.sleep(7)
+            
+            # 다시 속도가 50인 상태로 전진
+            angle = 0.0
+            speed = 100
+            speed = float(speed)
+            twist = Twist()
+            twist.linear.x = speed
+            twist.angular.z = angle
+            pub.publish(twist)
+            time.sleep(6)
+            
+            angle = 45
+            speed = 0.0
+            angle = float(angle)
+            twist = Twist()
+            twist.linear.x = speed
+            twist.angular.z = angle
+            pub.publish(twist)
+            time.sleep(7)
+            
+            angle = 0.0
+            speed = 100
+            speed = float(speed)
+            twist = Twist()
+            twist.linear.x = speed
+            twist.angular.z = angle
+            pub.publish(twist)
+            time.sleep(5)
+            
+            angle = 0.0
+            speed = 0
+            speed = float(speed)
+            twist = Twist()
+            twist.linear.x = speed
+            twist.angular.z = angle
+            pub.publish(twist)
+            time.sleep(5)
+            
+
+            twist = Twist()
+            twist.linear.x = 0.0
+            twist.angular.z = 0.0
+            pub.publish(twist)
+            
 
         if key=="a":
             print(key)
