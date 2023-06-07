@@ -31,7 +31,7 @@ class serial_node(Node):
         self.i = 0
 
     def listener_callback(self, msg):
-    # Pyserial TX (Arudino -> ROS2)
+        # Pyserial TX (Arudino -> ROS2)
         self.i += 0.3
         robot = Twist()
         enco = Vector3()
@@ -41,15 +41,16 @@ class serial_node(Node):
 
         self.serial_write(robot.linear.x, robot.angular.z)
 
-        data = self.serial_read()
-        print(data)
-        if data and len(data) >= 2:
-            enco.x = float(data[0])
-            enco.y = float(data[1])
-            print(2)
-            self.publisher_.publish(enco)
-        else:
-            print("err")
+        if self.i % 100 == 0:
+            data = self.serial_read()
+            if data and len(data) >= 2:
+                enco.x = float(data[0])
+                enco.y = float(data[1])
+                print(2)
+                self.publisher_.publish(enco)
+            else:
+                print("err")
+
 
     
     def serial_write(self,data1,data2):
