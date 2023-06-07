@@ -114,7 +114,7 @@ def main(args=None):
             pub.publish(twist) 
         
         if key =="2":
-           print(key)
+            print(key)
             speed += 60  # 속도를 10 증가시킴
             print(speed)
 
