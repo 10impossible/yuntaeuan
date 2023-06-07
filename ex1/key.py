@@ -60,41 +60,7 @@ def main(args=None):
             twist = Twist()
             twist.linear.x = 0
             twist.angular.z = 0
-            pub.publish(twist)
-
-            if key == "w":
-                print(key)
-                speed += 150  # 속도를 10 증가시킴
-                print(speed)
-
-                # 전진 속도를 유지하는 동안 3초간 대기
-                twist = Twist()
-                speed = float(speed)
-                twist.linear.x = speed
-                pub.publish(twist)
-                time.sleep(5)
-
-                # 90도 오른쪽으로 회전하는 동작 추가
-                angle += 5
-                twist = Twist()
-                angle = float(angle)
-                twist.angular.z = angle
-                pub.publish(twist)
-
-                # 다시 속도가 10인 상태로 전진
-                speed = 50
-                speed = float(speed)
-                twist.linear.x = speed
-                pub.publish(twist)
-                time.sleep(3)
-
-                twist = Twist()
-                twist.linear.x = 0
-                twist.angular.z = 0
-                pub.publish(twist)
-
-            
-          
+            pub.publish(twist) 
         
         if key =="s":
             print(key)
@@ -136,11 +102,11 @@ def main(args=None):
         print(1)
 
 
-        twist = Twist()
-        speed=float(speed)
-        twist.linear.x = speed; twist.linear.y = 0.0; twist.linear.z = 0.0
-        twist.angular.x = 0.0; twist.angular.y = 0.0; twist.angular.z = float(angle)
-        pub.publish(twist)
+#         twist = Twist()
+#         speed=float(speed)
+#         twist.linear.x = speed; twist.linear.y = 0.0; twist.linear.z = 0.0
+#         twist.angular.x = 0.0; twist.angular.y = 0.0; twist.angular.z = float(angle)
+#         pub.publish(twist)
 
 
         termios.tcsetattr(sys.stdin, termios.TCSADRAIN, settings)
