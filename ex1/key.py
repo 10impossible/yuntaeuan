@@ -98,6 +98,15 @@ def main(args=None):
             pub.publish(twist)
             time.sleep(5)
             
+            angle = 0.0
+            speed = 0
+            speed = float(speed)
+            twist = Twist()
+            twist.linear.x = speed
+            twist.angular.z = angle
+            pub.publish(twist)
+            time.sleep(5)
+            
 
             twist = Twist()
             twist.linear.x = 0.0
