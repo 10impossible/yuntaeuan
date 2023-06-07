@@ -30,32 +30,27 @@ class serial_node(Node):
 
         self.i = 0
 
-    def listener_callback(data):
-        if len(data) >= 2:  # data 리스트의 길이가 2 이상인 경우에만 인덱스에 접근
+    def listener_callback(self, msg):
+    # Pyserial TX (Arudino -> ROS2)
+        self.i += 0.3
+        robot = Twist()
+        enco = Vector3()
+
+        robot.linear.x = msg.linear.x
+        robot.angular.z = msg.angular.z
+
+        self.serial_write(robot.linear.x, robot.angular.z)
+
+        data = self.serial_read()
+        print(data)
+        if data and len(data) >= 2:
             enco.x = float(data[0])
             enco.y = float(data[1])
-        else:
-            print("Invalid data format")
-
-        # Pyserial TX (Arudino -> ROS2)
-        self.i +=0.3
-        robot = Twist()
-        enco=Vector3()
-
-        robot.linear.x=msg.linear.x
-        robot.angular.z=msg.angular.z
-
-        self.serial_write(robot.linear.x,robot.angular.z)
-        
-        data=self.serial_read()
-        print(data)
-        if data!= -1:
-            enco.x=float(data[0])
-            enco.y=float(data[1])
             print(2)
             self.publisher_.publish(enco)
         else:
             print("err")
+
     
     def serial_write(self,data1,data2):
         
