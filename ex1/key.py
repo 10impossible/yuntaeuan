@@ -340,7 +340,6 @@ def main(args=None):
             pub.publish(twist)
             time.sleep(7)
 
-            # 다시 속도가 50인 상태로 전진
             angle = 0.0
             speed = 100
             speed = float(speed)
@@ -348,7 +347,7 @@ def main(args=None):
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
-            time.sleep(7)
+            time.sleep(5)
             
             angle = -45
             speed = 0.0
@@ -367,6 +366,15 @@ def main(args=None):
             twist.angular.z = angle
             pub.publish(twist)
             time.sleep(6)
+            
+            angle = 45
+            speed = 0.0
+            angle = float(angle)
+            twist = Twist()
+            twist.linear.x = speed
+            twist.angular.z = angle
+            pub.publish(twist)
+            time.sleep(7)
             
             angle = 0.0
             speed = 100
@@ -717,6 +725,15 @@ def main(args=None):
             twist.angular.z = angle
             pub.publish(twist)
             time.sleep(6)
+            
+            angle = 45
+            speed = 0.0
+            angle = float(angle)
+            twist = Twist()
+            twist.linear.x = speed
+            twist.angular.z = angle
+            pub.publish(twist)
+            time.sleep(7)
             
             angle = 0.0
             speed = 100
