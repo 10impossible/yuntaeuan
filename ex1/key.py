@@ -40,7 +40,7 @@ def main(args=None):
             speed = float(speed)
             twist.linear.x = speed
             pub.publish(twist)
-            time.sleep(10)
+            time.sleep(11)
 
             # 180도 회전
             angle = 45
@@ -301,7 +301,7 @@ def main(args=None):
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
-            time.sleep(7)
+            time.sleep(6)
             
             angle = 0.0
             speed = 100
@@ -320,7 +320,7 @@ def main(args=None):
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
-            time.sleep(15)
+            time.sleep(13)
 
             angle = 0.0
             speed = 100
