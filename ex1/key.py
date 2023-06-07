@@ -428,7 +428,7 @@ def main(args=None):
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
-            time.sleep(5)
+            time.sleep(6)
             
             # 180도 오른쪽으로 회전하는 동작 추가
             angle = 45
