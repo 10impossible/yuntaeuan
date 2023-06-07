@@ -23,7 +23,6 @@ def main(args=None):
     node = rclpy.create_node('cmd')
         
     pub = node.create_publisher(Twist, 'cmd', 3)
-    twist = Twist()
 
     speed=0
     angle=0
@@ -37,7 +36,7 @@ def main(args=None):
             print(speed)
 
             # 전진 속도를 유지하는 동안 5초간 대기
-#             twist = Twist()
+            twist = Twist()
             speed = float(speed)
             twist.linear.x = speed
             pub.publish(twist)
@@ -46,7 +45,7 @@ def main(args=None):
             # 90도 오른쪽으로 회전하는 동작 추가
             angle = 45
             speed = 0.0
-#             twist = Twist()
+            twist = Twist()
             angle = float(angle)
             twist.linear.x = speed
             twist.angular.z = angle
@@ -57,7 +56,7 @@ def main(args=None):
             angle = 0.0
             speed = 50
             speed = float(speed)
-#             twist = Twist()
+            twist = Twist()
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
