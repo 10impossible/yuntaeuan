@@ -63,7 +63,7 @@ def main(args=None):
             
             angle = -45
             speed = 0.0
-            speed = float(speed)
+            angle = float(angle)
             twist = Twist()
             twist.linear.x = speed
             twist.angular.z = angle
@@ -82,7 +82,7 @@ def main(args=None):
             
             angle = 45
             speed = 0.0
-            speed = float(speed)
+            angle = float(angle)
             twist = Twist()
             twist.linear.x = speed
             twist.angular.z = angle
