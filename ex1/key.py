@@ -32,7 +32,7 @@ def main(args=None):
         key = getKey()
         if key == "w":
             print(key)
-            speed += 40  # 속도를 10 증가시킴
+            speed += 60  # 속도를 10 증가시킴
             print(speed)
 
             # 전진 속도를 유지하는 동안 5초간 대기
@@ -43,7 +43,7 @@ def main(args=None):
             time.sleep(5)
 
             # 90도 오른쪽으로 회전하는 동작 추가
-            angle = 30
+            angle = 40
             speed = 0.0
             twist = Twist()
             angle = float(angle)
@@ -54,7 +54,7 @@ def main(args=None):
 
             # 다시 속도가 50인 상태로 전진
             angle = 0.0
-            speed = 50
+            speed = 60
             speed = float(speed)
             twist = Twist()
             twist.linear.x = speed
