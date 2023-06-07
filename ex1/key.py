@@ -115,7 +115,7 @@ def main(args=None):
         
         if key =="2":
             print(key)
-            speed += 60  # 속도를 10 증가시킴
+            speed += 100  # 속도를 10 증가시킴
             print(speed)
 
             # 전진 속도를 유지하는 동안 5초간 대기
@@ -136,7 +136,7 @@ def main(args=None):
             time.sleep(14)
             
             angle = 0.0
-            speed = 60
+            speed = 100
             speed = float(speed)
             twist = Twist()
             twist.linear.x = speed
@@ -155,7 +155,7 @@ def main(args=None):
             
             # 다시 속도가 50인 상태로 전진
             angle = 0.0
-            speed = 60
+            speed = 100
             speed = float(speed)
             twist = Twist()
             twist.linear.x = speed
@@ -173,7 +173,7 @@ def main(args=None):
             time.sleep(7)
             
             angle = 0.0
-            speed = 60
+            speed = 100
             speed = float(speed)
             twist = Twist()
             twist.linear.x = speed
