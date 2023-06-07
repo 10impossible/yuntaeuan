@@ -40,7 +40,7 @@ def main(args=None):
             speed = float(speed)
             twist.linear.x = speed
             pub.publish(twist)
-            time.sleep(11)
+            time.sleep(10.5)
 
             # 180도 회전
             angle = 45
@@ -50,7 +50,7 @@ def main(args=None):
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
-            time.sleep(13)
+            time.sleep(13.5)
             
             # 0.5번
             angle = 0.0
@@ -60,7 +60,7 @@ def main(args=None):
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
-            time.sleep(4)
+            time.sleep(4.5)
             
             # 좌측회전
             angle = -45
@@ -70,7 +70,7 @@ def main(args=None):
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
-            time.sleep(6)
+            time.sleep(6.5)
             
             # 다시 속도가 50인 상태로 전진
             angle = 0.0
@@ -80,7 +80,7 @@ def main(args=None):
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
-            time.sleep(7)
+            time.sleep(7.5)
             
             angle = 45
             speed = 0.0
@@ -89,7 +89,7 @@ def main(args=None):
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
-            time.sleep(6)
+            time.sleep(6.5)
             
             angle = 0.0
             speed = 100
@@ -98,7 +98,7 @@ def main(args=None):
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
-            time.sleep(6)
+            time.sleep(6.5)
             
             angle = 0.0
             speed = 0
@@ -125,7 +125,7 @@ def main(args=None):
             speed = float(speed)
             twist.linear.x = speed
             pub.publish(twist)
-            time.sleep(16)
+            time.sleep(17)
 
             # 90도 오른쪽으로 회전하는 동작 추가
             angle = 45
@@ -135,7 +135,7 @@ def main(args=None):
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
-            time.sleep(14)
+            time.sleep(13)
             
             angle = 0.0
             speed = 100
@@ -144,7 +144,7 @@ def main(args=None):
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
-            time.sleep(10)
+            time.sleep(11)
             
             angle = -45
             speed = 0.0
@@ -153,7 +153,7 @@ def main(args=None):
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
-            time.sleep(7)
+            time.sleep(6)
             
             # 다시 속도가 50인 상태로 전진
             angle = 0.0
@@ -163,7 +163,7 @@ def main(args=None):
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
-            time.sleep(6)
+            time.sleep(7)
             
             angle = 45
             speed = 0.0
