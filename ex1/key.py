@@ -50,7 +50,7 @@ def main(args=None):
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
-            time.sleep(2)
+            time.sleep(6)
 
             # 다시 속도가 50인 상태로 전진
             angle = 0.0
