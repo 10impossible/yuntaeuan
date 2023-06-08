@@ -60,7 +60,7 @@ def main(args=None):
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
-            time.sleep(5)
+            time.sleep(4)
             
             # 좌측회전
             angle = -45
