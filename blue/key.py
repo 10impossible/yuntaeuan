@@ -32,7 +32,7 @@ def main(args=None):
         key = getKey()
         if key == "1":
             print(key)
-            speed += 100  # 속도를 10 증가시킴
+            speed += 500  # 속도를 10 증가시킴
             print(speed)
 
             # 1번
@@ -54,7 +54,7 @@ def main(args=None):
             
             # 0.5번
             angle = 0.0
-            speed = 100
+            speed = 500
             speed = float(speed)
             twist = Twist()
             twist.linear.x = speed
@@ -74,7 +74,7 @@ def main(args=None):
             
             # 다시 속도가 50인 상태로 전진
             angle = 0.0
-            speed = 100
+            speed = 500
             speed = float(speed)
             twist = Twist()
             twist.linear.x = speed
@@ -92,7 +92,7 @@ def main(args=None):
             time.sleep(7)
             
             angle = 0.0
-            speed = 100
+            speed = 500
             speed = float(speed)
             twist = Twist()
             twist.linear.x = speed
