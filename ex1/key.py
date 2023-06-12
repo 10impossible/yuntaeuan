@@ -529,7 +529,7 @@ def main(args=None):
             speed = float(speed)
             twist.linear.x = speed
             pub.publish(twist)
-            time.sleep(22)
+            time.sleep(22.2)
             
             angle = 45
             speed = 0.0
