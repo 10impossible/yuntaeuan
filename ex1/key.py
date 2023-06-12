@@ -769,7 +769,7 @@ def main(args=None):
             speed = float(speed)
             twist.linear.x = speed
             pub.publish(twist)
-            time.sleep(16.1)
+            time.sleep(16.3)
 
             angle = 45
             speed = 0.0
@@ -797,7 +797,7 @@ def main(args=None):
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
-            time.sleep(14.5)
+            time.sleep(14.7)
             
             angle = 0.0
             speed = 100
@@ -888,7 +888,7 @@ def main(args=None):
             speed = float(speed)
             twist.linear.x = speed
             pub.publish(twist)
-            time.sleep(22.2)
+            time.sleep(22.4)
             
             angle = 45
             speed = 0.0
@@ -944,7 +944,7 @@ def main(args=None):
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
-            time.sleep(15)
+            time.sleep(15.5)
             
             angle = -45
             speed = 0.0
@@ -981,7 +981,7 @@ def main(args=None):
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
-            time.sleep(3)
+            time.sleep(6.5)
             
             angle = 0.0
             speed = 0
