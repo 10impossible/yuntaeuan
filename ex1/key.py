@@ -264,7 +264,7 @@ def main(args=None):
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
-            time.sleep(4)
+            time.sleep(5)
             
             angle = 0.0
             speed = 0
@@ -329,7 +329,7 @@ def main(args=None):
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
-            time.sleep(6)
+            time.sleep(5)
 
             angle = -45
             speed = 0.0
@@ -484,7 +484,7 @@ def main(args=None):
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
-            time.sleep(6)
+            time.sleep(5.5)
             
             angle = 45
             speed = 0.0
@@ -604,7 +604,7 @@ def main(args=None):
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
-            time.sleep(6)
+            time.sleep(6.5)
             
             angle = 45
             speed = 0.0
@@ -622,7 +622,7 @@ def main(args=None):
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
-            time.sleep(3)
+            time.sleep(5)
             
             angle = 0.0
             speed = 0
@@ -678,7 +678,7 @@ def main(args=None):
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
-            time.sleep(14)
+            time.sleep(14.5)
 
             angle = 0.0
             speed = 100
@@ -797,7 +797,7 @@ def main(args=None):
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
-            time.sleep(14)
+            time.sleep(14.5)
             
             angle = 0.0
             speed = 100
@@ -935,7 +935,7 @@ def main(args=None):
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
-            time.sleep(7.5)
+            time.sleep(7.2)
             
             angle = 0.0
             speed = 100
