@@ -40,7 +40,7 @@ def main(args=None):
             speed = float(speed)
             twist.linear.x = speed
             pub.publish(twist)
-            time.sleep(10)
+            time.sleep(5)
 
             # 180도 회전
             angle = 45
