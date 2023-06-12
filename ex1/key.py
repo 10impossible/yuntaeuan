@@ -963,7 +963,7 @@ def main(args=None):
             twist.linear.x = speed
             twist.angular.z = angle
             pub.publish(twist)
-            time.sleep(6.8)
+            time.sleep(7)
             
             angle = 45
             speed = 0.0
